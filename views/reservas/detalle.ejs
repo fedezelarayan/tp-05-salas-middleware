@@ -1,0 +1,27 @@
+<section>
+  <h2>Detalle de la reserva #<%= reserva.id %></h2>
+
+  <dl>
+    <dt>Estudiante</dt>
+    <dd><%= reserva.estudiante %></dd>
+
+    <dt>Email</dt>
+    <dd><%= reserva.email %></dd>
+
+    <dt>Sala</dt>
+    <dd><%= reserva.sala %></dd>
+
+    <dt>Fecha</dt>
+    <dd><%= reserva.fecha %></dd>
+
+    <dt>Turno</dt>
+    <dd><%= reserva.turno %></dd>
+
+    <dt>Personas</dt>
+    <dd><%= reserva.personas %></dd>
+  </dl>
+
+  <nav aria-label="Acciones de la reserva">
+    <a href="/reservas">Volver a reservas</a>
+  </nav>
+</section>

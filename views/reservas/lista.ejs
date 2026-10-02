@@ -1,0 +1,34 @@
+<section>
+  <h2><%= seccion %></h2>
+
+  <p>
+    En esta sección podés consultar todas las reservas registradas.
+  </p>
+
+  <a href="/reservas/nueva">Crear nueva reserva</a>
+
+  <% if (reservas.length === 0) { %>
+    <p>No hay reservas registradas.</p>
+  <% } else { %>
+    <ul>
+      <% reservas.forEach(reserva => { %>
+        <li>
+          <strong>Reserva #<%= reserva.id %></strong>
+
+          <ul>
+            <li>Estudiante: <%= reserva.estudiante %></li>
+            <li>Email: <%= reserva.email %></li>
+            <li>Sala: <%= reserva.sala %></li>
+            <li>Fecha: <%= reserva.fecha %></li>
+            <li>Turno: <%= reserva.turno %></li>
+            <li>Personas: <%= reserva.personas %></li>
+          </ul>
+
+          <a href="/reservas/<%= reserva.id %>">
+            Ver detalle
+          </a>
+        </li>
+      <% }) %>
+    </ul>
+  <% } %>
+</section>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><%= typeof title !== "undefined" ? title : "Reservas de salas" %></title>
+
+    <link rel="stylesheet" href="/css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Reservas de salas</h1>
+
+        <nav aria-label="Navegación principal">
+            <a href="/">Inicio</a>
+            <a href="/reservas">Reservas</a>
+            <a href="/reservas/nueva">Nueva reserva</a>
+        </nav>
+    </header>
+
+    <main>
+        <%- body %>
+    </main>
+
+    <footer>
+        <small>
+            Solicitud: <%= solicitudId %>
+        </small>
+    </footer>
+
+</body>
+
+</html>
